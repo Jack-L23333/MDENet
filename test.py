@@ -3,7 +3,7 @@ sys.path.insert(0, '.')
 import torch
 import torch.backends.cudnn as cudnn
 import torch.optim.lr_scheduler
-import dataset as myDataLoader
+import datasets as myDataLoader
 import Transforms as myTransforms
 from metric_tool import ConfuseMatrixMeter
 import time
