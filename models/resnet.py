@@ -211,7 +211,7 @@ def _resnet(arch, block, layers, pretrained, **kwargs):
     if pretrained:
         state_dict = load_state_dict_from_url(model_urls[arch],
                                               progress=True)
-        # state_dict = torch.load('/home/zijun/下载/seco_resnet18_1m.ckpt', map_location='cpu')
+        
         model.load_state_dict(state_dict)
     return model
 
