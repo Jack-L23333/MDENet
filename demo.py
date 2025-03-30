@@ -115,7 +115,7 @@ if __name__ == '__main__':
                         help='Directory to save the results')
     parser.add_argument('--onGPU', default=True, type=lambda x: (str(x).lower() == 'true'),
                         help='Run on CPU or GPU. If TRUE, then GPU.')
-    parser.add_argument('--weight', default='D:\yanjiu\DGMA2-Net-main(MDFM替换为difem+hilo+phdm+CGAFusion)\log\CDTH_iter_10000_lr_0.0001\Epoch155_0.6932238571270309.pth', type=str, help='pretrained weight, can be a non-strict copy')
+    parser.add_argument('--weight', default='D:\Epoch155_0.6932238571270309.pth', type=str, help='pretrained weight, can be a non-strict copy')
     parser.add_argument('--ms', type=int, default=0, help='apply multi-scale training, default False')
 
     args = parser.parse_args()
