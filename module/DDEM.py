@@ -21,7 +21,7 @@ class DilatedAttention(nn.Module):
 
         out = (attn.unsqueeze(1) * v).sum(dim=-2)
         return out
-class DDEM(nn.Module):  #DDAM
+class DDEM(nn.Module): 
     def __init__(self, in_d, kernel_size=3, dilation=2):
        super(DDEM, self).__init__()
 
@@ -51,7 +51,7 @@ class DDEM(nn.Module):  #DDAM
         f_map_v = rearrange(V, 'b c h w -> b c (h w)')
 
         # 使用膨胀注意力
-        out1 = self.dilated_attention(e_map_q, e_map_k, e_map_v, he, we)
+        out1 = self.dilated_attention(e_map_q, e_map_k, f_map_v, he, we)
 
         # 还原形状并融合
         Out = rearrange(out1, 'b c (h w) -> b c h w', h=he, w=we)
