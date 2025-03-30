@@ -111,7 +111,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_workers', type=int, default=4, help='No. of parallel threads')
     parser.add_argument('--batch_size', type=int, default=1, help='Batch size')
     parser.add_argument('--vis_dir',
-                        default=r'D:\yanjiu\DGMA2-Net-main(MDFM替换为difem+hilo+phdm+CGAFusion)\Vis',
+                        default=r'D:\yanjiu\Vis',
                         help='Directory to save the results')
     parser.add_argument('--onGPU', default=True, type=lambda x: (str(x).lower() == 'true'),
                         help='Run on CPU or GPU. If TRUE, then GPU.')
